@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             version="3.1">
+
+
+    <persistence-unit name="hibernatecrud" transaction-type="RESOURCE_LOCAL">
+
+
+        <!-- Clases a Mapear-->
+        <class>org.example.Inspector</class>
+        <class>org.example.Instituto</class>
+        <class>org.example.Director</class>
+        <class>org.example.Departamento</class>
+        <class>org.example.Proveedor</class>
+
+
+        <properties>
+            <!-- Driver -->
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+
+
+            <!-- URL -->
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/hibernatecrud" />
+
+
+            <!-- Usuario y Contraseña -->
+            <property name="javax.persistence.jdbc.user" value="root" />
+            <property name="javax.persistence.jdbc.password" value="" />
+
+
+            <!-- Dialecto SQL -->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+
+
+            <property name="hibernate.show_sql" value="true" />
+            <property name="hibernate.hbm2ddl.auto" value="update" />
+        </properties>
+
+
+    </persistence-unit>
+
+
+</persistence>
